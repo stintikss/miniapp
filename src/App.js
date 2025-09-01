@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { WebApp } from '@twa-dev/sdk';
+import WebApp from '@twa-dev/sdk';
 import './App.css';
 
 // Главная страница
@@ -21,11 +21,6 @@ const HomePage = ({ onNavigate }) => {
     WebApp.MainButton.setText('ОТКРЫТЬ ПРОФИЛЬ');
     WebApp.MainButton.show();
     WebApp.MainButton.onClick(() => onNavigate('profile'));
-  };
-
-  const handleBackButton = () => {
-    WebApp.BackButton.hide();
-    WebApp.MainButton.hide();
   };
 
   return (

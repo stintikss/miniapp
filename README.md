@@ -151,7 +151,7 @@ npm run deploy
 ### Основные методы Telegram Mini App SDK
 
 ```javascript
-import { WebApp } from '@tma.js/sdk';
+import WebApp from '@twa-dev/sdk';
 
 // Инициализация
 WebApp.ready();

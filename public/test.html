@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Mini App - Тест</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #2481cc;
+            color: white;
+            padding: 16px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .button {
+            background: #2481cc;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 8px;
+            font-size: 16px;
+        }
+        .button:hover {
+            background: #1a6bb3;
+        }
+        .info {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 12px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧪 Тест Mini App</h1>
+        </div>
+        <div class="content">
+            <p>Это тестовая страница для проверки работы Telegram Mini App.</p>
+            
+            <div class="info">
+                <strong>Для тестирования:</strong><br>
+                1. Запустите приложение: <code>npm start</code><br>
+                2. Откройте: <a href="http://localhost:3000" target="_blank">http://localhost:3000</a><br>
+                3. Протестируйте навигацию между страницами
+            </div>
+            
+            <button class="button" onclick="window.open('http://localhost:3000', '_blank')">
+                🚀 Открыть приложение
+            </button>
+            
+            <div class="info">
+                <strong>Что тестировать:</strong><br>
+                ✅ Навигация между страницами<br>
+                ✅ Кнопки и их стили<br>
+                ✅ Адаптивность дизайна<br>
+                ✅ Анимации и переходы
+            </div>
+            
+            <div class="info">
+                <strong>Следующие шаги:</strong><br>
+                1. Разместите на хостинге (Vercel/Netlify)<br>
+                2. Создайте бота через @BotFather<br>
+                3. Настройте Mini App<br>
+                4. Протестируйте в Telegram
+            </div>
+        </div>
+    </div>
+</body>
+</html>
