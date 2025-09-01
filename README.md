@@ -1,70 +1,243 @@
-# Getting Started with Create React App
+# Telegram Mini App - Простое приложение
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Простая мини-апка для Telegram с навигацией между страницами, кнопками и красивым интерфейсом.
 
-## Available Scripts
+## 🚀 Возможности
 
-In the project directory, you can run:
+- ✅ Главная страница с приветствием пользователя
+- ✅ Страница "О нас" с информацией о компании
+- ✅ Страница "Услуги" с карточками услуг
+- ✅ Страница "Контакты" с кнопками связи
+- ✅ Страница "Профиль" с информацией о пользователе
+- ✅ Навигация между страницами
+- ✅ Использование Telegram Mini App SDK
+- ✅ Адаптивный дизайн
+- ✅ Анимации и переходы
+- ✅ Поддержка тем Telegram
 
-### `npm start`
+## 📱 Страницы приложения
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🏠 Главная страница
+- Приветствие пользователя
+- Кнопки навигации к другим страницам
+- Демонстрация главной кнопки Telegram
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 📖 О нас
+- Информация о компании
+- Преимущества (Быстро, Безопасно, Удобно)
 
-### `npm test`
+### 🛠️ Услуги
+- Карточки с услугами
+- Иконки и описания
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📞 Контакты
+- Кнопки для связи через Telegram, Email, Веб-сайт
+- Интеграция с Telegram API
 
-### `npm run build`
+### 👤 Профиль
+- Информация о пользователе из Telegram
+- Аватар пользователя
+- Данные профиля
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Установка и запуск
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Установка зависимостей
+```bash
+cd mini/tg-mini-app
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. Запуск в режиме разработки
+```bash
+npm start
+```
 
-### `npm run eject`
+Приложение будет доступно по адресу: `http://localhost:3000`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. Сборка для продакшена
+```bash
+npm run build
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔧 Настройка для Telegram
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 1. Создание бота в Telegram
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Найдите [@BotFather](https://t.me/BotFather) в Telegram
+2. Отправьте команду `/newbot`
+3. Следуйте инструкциям для создания бота
+4. Сохраните токен бота
 
-## Learn More
+### 2. Создание Mini App
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Отправьте команду `/newapp` боту @BotFather
+2. Выберите созданного бота
+3. Введите название мини-апки
+4. Введите короткое описание
+5. Загрузите иконку (512x512px)
+6. Сохраните URL вашего приложения
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 3. Настройка веб-приложения
 
-### Code Splitting
+1. Разместите собранное приложение на хостинге (например, Vercel, Netlify, GitHub Pages)
+2. Убедитесь, что приложение доступно по HTTPS
+3. Обновите URL в настройках бота
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 4. Настройка команд бота
 
-### Analyzing the Bundle Size
+Отправьте боту @BotFather команду `/setcommands` и выберите вашего бота. Затем отправьте:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+start - Запустить мини-апку
+help - Помощь
+```
 
-### Making a Progressive Web App
+### 5. Создание команды для запуска Mini App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Отправьте боту @BotFather команду `/setmenubutton` и выберите вашего бота. Затем отправьте:
 
-### Advanced Configuration
+```
+{
+  "type": "web_app",
+  "text": "Открыть приложение",
+  "web_app": {
+    "url": "https://your-app-url.com"
+  }
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🌐 Размещение на хостинге
 
-### Deployment
+### Vercel (Рекомендуется)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Создайте аккаунт на [vercel.com](https://vercel.com)
+2. Подключите ваш GitHub репозиторий
+3. Настройте сборку:
+   - Build Command: `npm run build`
+   - Output Directory: `build`
+4. Деплой автоматически произойдет при пуше в репозиторий
 
-### `npm run build` fails to minify
+### Netlify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Создайте аккаунт на [netlify.com](https://netlify.com)
+2. Загрузите папку `build` после сборки
+3. Получите URL вашего сайта
+
+### GitHub Pages
+
+1. В `package.json` добавьте:
+```json
+{
+  "homepage": "https://your-username.github.io/your-repo-name",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}
+```
+
+2. Установите gh-pages:
+```bash
+npm install --save-dev gh-pages
+```
+
+3. Деплой:
+```bash
+npm run deploy
+```
+
+## 🔗 Интеграция с Telegram
+
+### Основные методы Telegram Mini App SDK
+
+```javascript
+import { WebApp } from '@tma.js/sdk';
+
+// Инициализация
+WebApp.ready();
+WebApp.expand();
+
+// Получение данных пользователя
+const user = WebApp.initDataUnsafe?.user;
+
+// Главная кнопка
+WebApp.MainButton.setText('Текст кнопки');
+WebApp.MainButton.show();
+WebApp.MainButton.onClick(() => {
+  // Действие при клике
+});
+
+// Кнопка "Назад"
+WebApp.BackButton.show();
+WebApp.BackButton.onClick(() => {
+  // Действие при клике
+});
+
+// Открытие ссылок
+WebApp.openLink('https://example.com');
+WebApp.openTelegramLink('https://t.me/your_channel');
+```
+
+### Переменные CSS для тем Telegram
+
+```css
+/* Основные цвета */
+--tg-theme-bg-color: #ffffff;
+--tg-theme-text-color: #000000;
+--tg-theme-hint-color: #999999;
+--tg-theme-link-color: #2481cc;
+--tg-theme-button-color: #2481cc;
+--tg-theme-button-text-color: #ffffff;
+--tg-theme-secondary-bg-color: #f1f1f1;
+```
+
+## 📱 Тестирование
+
+### В Telegram Desktop
+1. Найдите вашего бота
+2. Нажмите кнопку "Открыть приложение"
+3. Протестируйте все функции
+
+### В Telegram Web
+1. Откройте [web.telegram.org](https://web.telegram.org)
+2. Найдите вашего бота
+3. Протестируйте приложение
+
+### В мобильном приложении
+1. Откройте Telegram на телефоне
+2. Найдите вашего бота
+3. Протестируйте все функции
+
+## 🎨 Кастомизация
+
+### Изменение цветов
+Отредактируйте файл `src/App.css` и измените CSS переменные или цвета.
+
+### Добавление новых страниц
+1. Создайте новый компонент страницы
+2. Добавьте его в функцию `renderPage()` в `App.js`
+3. Добавьте кнопку навигации на главную страницу
+
+### Изменение контента
+Отредактируйте тексты и контент в соответствующих компонентах.
+
+## 🚨 Важные замечания
+
+1. **HTTPS обязателен** - Telegram требует HTTPS для всех Mini Apps
+2. **Размер приложения** - старайтесь держать размер под 10MB
+3. **Производительность** - оптимизируйте загрузку и рендеринг
+4. **Безопасность** - не храните чувствительные данные в localStorage
+5. **Тестирование** - всегда тестируйте на разных устройствах
+
+## 📞 Поддержка
+
+Если у вас возникли вопросы или проблемы:
+
+1. Проверьте консоль браузера на ошибки
+2. Убедитесь, что все зависимости установлены
+3. Проверьте настройки бота в @BotFather
+4. Убедитесь, что приложение доступно по HTTPS
+
+## 📄 Лицензия
+
+Этот проект создан для демонстрации возможностей Telegram Mini Apps.
