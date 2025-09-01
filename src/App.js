@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { WebApp } from '@tma.js/sdk';
+import { WebApp } from '@twa-dev/sdk';
 import './App.css';
 
 // Главная страница
